@@ -104,8 +104,8 @@ function clickedWrite() {
 function showWrite(date){
     console.log("修改地址");
     console.log(window.location.href)
-    let search = window.location.search;
-    let src_setting = search+"/write";
+    // let search = window.location.search;
+    let src_setting = "write";
     $('.config-panel').modal('show');
     $('#config').attr('src',  src_setting);
     setTimeout(function(){
@@ -116,8 +116,8 @@ function showWrite(date){
 function showSetting(){
     console.log("按键按下");
     $('.config-panel').modal('show');
-    let search = window.location.search;
-    let src_setting = search+"/setting";
+
+    let src_setting = "setting";
     $('#config').attr('src',  src_setting);
     $('#config').show();
     $('.config-panel #loader').hide();
