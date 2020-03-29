@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.xinhe.dao.DiaryMapper">
+    <resultMap id="BaseResultMap" type="com.xinhe.entity.Diary">
+        <result column="diaryId" property="userDiaryId" jdbcType="VARCHAR"/>
+        <result column="diaryContext" property="userDiaryContext" jdbcType="VARCHAR"/>
+    </resultMap>
+    <insert id="addDiary" parameterType="com.xinhe.entity.Diary">
+        INSERT INTO diaryNote(diaryId,diaryContext)
+        VALUES(#{userDiaryId},#{userDiaryContext});
+    </insert>
+    <delete id="deleteDiary" parameterType="java.lang.String">
+        DELETE FROM diaryNote WHERE  diaryId = #{userDiaryId};
+    </delete>
+    <update id="updateDiary" parameterType="com.xinhe.entity.Diary">
+        UPDATE diaryNote SET diaryContext = #{userDiaryContext} WHERE diaryId = #{userDiaryId};
+    </update>
+    <select id="selectDiary" parameterType="java.lang.String" resultMap="BaseResultMap">
+        SELECT * FROM diaryNote WHERE diaryId=#{userDiaryId};
+    </select>
+    <select id="selectAllDiary" parameterType="java.lang.String" resultMap="BaseResultMap">
+        SELECT * FROM diaryNote;
+    </select>
+</mapper>

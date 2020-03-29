@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="zh">
+
+
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+	<meta name="baidu-site-verification" content="mHrjiyhU2L" />
+    <title>Oh生活－简洁，高效的在线日记</title>
+    <meta name="description" content="「Oh生活」是一个在线日记网站，注册后每天给你指定邮箱发送一封邮件，回复邮件即可记录当天的日记。它诞生于2014年9月21日OhLife关闭的日子。">
+    <meta name="keywords" content="日记,在线日记,日记网,私人日记">
+<!--    <link rel="icon" type="image/png" href="/static/img/favicon.png">-->
+<!--    <link rel="shortcut icon" href="/static/img/favicon.png" type="image/x-icon" />-->
+    
+
+    
+    <link href="css/common.css" rel="stylesheet">
+    
+    <link rel='stylesheet' href="css/setting.css"/>
+
+
+</head>
+<body>
+    
+    <div class='header'>
+        <div class='title'>设置</div>
+         
+        <div id='btn-done' class='btn done'>关闭</div>
+        
+    </div>
+    <div class='content'>
+        <div class='left-panel'>
+            <ul>
+                <li class='active'>常规</li>
+            </ul>
+        </div>
+        <div class='tabs-container'>
+            <ul class='tab'>
+                 
+                <li>
+                    <div class='tab-left'>
+                        修改密码
+                    </div>
+                    <div class='tab-center'>
+                        <form id='form-changepw' action='/api/user/password/' method='POST' cb='changePWDone'>
+                            <div class='input-holder'>
+                                <input type='password' name='password_old' placeholder='旧密码'/>
+                            </div>
+                            <div class='input-holder'>
+                                <input type='password' name='password_new' placeholder='新密码'/>
+                            </div>
+                            <div>
+                                <input type='submit' class='btn done' value='提交'>
+                            </div>
+                        </form>
+                    </div>
+                    <div class='tab-right'>
+                        请使用尽可能复杂的密码
+                    </div>
+                </li>
+                
+                <li>
+                    <div class='tab-left'>
+                        发信频率
+                    </div>
+                    <div class='tab-center'>
+                        <form id='form-changefrquency' action='/api/user/frequency/' method='POST' cb='changeFCDone'>
+                            <div>
+                                <select id='select-frequency' name='frequency'>
+                                    
+                                        <option value='d'>每天</option>
+                                    
+                                        <option value='w'>每周</option>
+                                    
+                                        <option value='2w'>每两周</option>
+                                    
+                                </select>
+                            </div>
+                            <div>
+                                <input type='submit' class='btn done' value='提交'>
+                            </div>
+                        </form>
+                    </div>
+                    <div class='tab-right'>
+                        设置推送邮件发送的频率
+                    </div>
+                </li>
+                 
+                <li>
+                    <div class='tab-left'>
+                        发信时间
+                    </div>
+                    <div class='tab-center'>
+                        <form id='form-changesendhour' action='/api/user/send_hour/' method='POST' cb='changeSHDone'>
+                            <div>
+                                <select id='select-sendhour' name='send_hour'>
+                                    
+                                        <option value='6'>06:00</option>
+                                    
+                                        <option value='7'>07:00</option>
+                                    
+                                        <option value='8'>08:00</option>
+                                    
+                                        <option value='9'>09:00</option>
+                                    
+                                        <option value='10'>10:00</option>
+                                    
+                                        <option value='11'>11:00</option>
+                                    
+                                        <option value='12'>12:00</option>
+                                    
+                                        <option value='13'>13:00</option>
+                                    
+                                        <option value='14'>14:00</option>
+                                    
+                                        <option value='15'>15:00</option>
+                                    
+                                        <option value='16'>16:00</option>
+                                    
+                                        <option value='17'>17:00</option>
+                                    
+                                        <option value='18'>18:00</option>
+                                    
+                                        <option value='19'>19:00</option>
+                                    
+                                        <option value='20'>20:00</option>
+                                    
+                                        <option value='21'>21:00</option>
+                                    
+                                        <option value='22'>22:00</option>
+                                    
+                                </select>
+                            </div>
+                            <div>
+                                <input type='submit' class='btn done' value='提交'>
+                            </div>
+                        </form>
+                    </div>
+                    <div class='tab-right'>
+                        设置推送邮件发送的时间
+                    </div>
+                </li>
+                
+                 
+                <li>
+                    <div class='tab-left'>
+                        暂停推送
+                    </div>
+                    <div class='tab-center'>
+                        <form id='form-changesendhour' action='/api/user/stop_mail/' method='POST' cb='changeSMDone'>
+                            <div>
+                                <input type="checkbox" id='checkbox-stopmail' name='stop_mail' value='1'/>
+                            </div>
+                            <div>
+                                <input type='submit' class='btn done' value='提交'>
+                            </div>
+                        </form>
+                    </div>
+                    <div class='tab-right'>
+                        如果你暂时不希望收到推送邮件，请勾选
+                    </div>
+                </li>
+                
+            </u>
+        </div>
+    </div>
+
+    
+    <script>
+        var token = "";
+        if (token) {
+            OhUtil.setToken(token);
+        }
+    </script>
+    <script src='js/lib/jquery.min.js'></script>
+    <script src='js/lib/jquery-cookie.js'></script>
+    <script src='js/ohutil.js'></script>
+    <script src='js/app/setting.js'></script>
+
+</body>

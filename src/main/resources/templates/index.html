@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="zh">
+
+
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+	<meta name="baidu-site-verification" content="mHrjiyhU2L" />
+    <title>Oh生活</title>
+    <meta name="description" content="「Oh生活」是一个在线日记网站，注册后每天给你指定邮箱发送一封邮件，回复邮件即可记录当天的日记。它诞生于2014年9月21日OhLife关闭的日子。">
+    <meta name="keywords" content="日记,在线日记,日记网,私人日记">
+<!--    <link rel="icon" type="image/png" href="/static/img/favicon.png">-->
+<!--    <link rel="shortcut icon" href="/static/img/favicon.png" type="image/x-icon" />-->
+<!--    -->
+
+
+    <link rel="stylesheet" href="css/common.css">
+<!--    <link  href="../static/css/semantic.css"/>-->
+    <link rel="stylesheet" href="css/diary.css"/>
+    <link rel="stylesheet" href="css/loader.css"/>
+
+</head>
+<body>
+    
+    <div class='left-nav'>
+        <div class='logo'>
+            <span class='oh'>Oh</span>生活
+            <span class='loading'></span>
+        </div>
+        <div class='btn prev'>前一篇</div>
+        <div class='btn next'>后一篇</div>
+        <div class='btn random'>随机</div>
+        <div id='shortcut-btn' class='link'>快键</div>
+        <div class='bottom-btngrp'>
+            <div class='btn setting'>设置</div>
+            <div class='btn new'>写日记</div>
+			<div class='user-info'>
+				<div class='user-email'>
+				</div>
+				<div class='logout-btn'>
+					退出
+				</div>
+			</div>
+        </div>
+    </div>
+    <div class='msg'> </div>
+<!--    <div class='paper-holder'>-->
+<!--        <div class='paper'>-->
+<!--            <div class='title'>-->
+<!--                <div class='main'>-->
+<!--                    <span class='date'></span>，<span class='weekday'></span>-->
+<!--                </div>-->
+<!--                <div class='diff'></div>-->
+<!--            </div>-->
+<!--            <div class='content'></div>-->
+<!--            <div class='bottom'><div class='edt'>修改</div><div class='del'>删除</div></div>-->
+<!--        </div>-->
+<!--        <div class='paper empty'>-->
+<!--            <div class='text'>-->
+<!--                你好像还没有写过日记。</br></br>-->
+<!--                点击左下角的「写日记」按钮，开始记录你的第一篇日记吧！</br></br>-->
+<!--                （你也可以通过快键「C」直接进入写日记界面）-->
+<!--            </div>-->
+<!--        </div>-->
+<!--        <div class='calendar'>-->
+<!--            <div class='header'>-->
+<!--                <div class='ctrl' data-nav='prev'>前一月</div>-->
+<!--                <div class='title'>六月</div>-->
+<!--                <div class='ctrl' data-nav='next'>后一月</div>-->
+<!--            </div>-->
+<!--            <table class='content'>-->
+<!--                <tr class='weekdays'>-->
+<!--                    <th class='weekday'>一</th>-->
+<!--                    <th class='weekday'>二</th>-->
+<!--                    <th class='weekday'>三</th>-->
+<!--                    <th class='weekday'>四</th>-->
+<!--                    <th class='weekday'>五</th>-->
+<!--                    <th class='weekday'>六</th>-->
+<!--                    <th class='weekday'>天</th>-->
+<!--                </tr>-->
+<!--            </table>-->
+<!--        </div>-->
+<!--    </div>-->
+    <div class='config-panel'>
+        <div id="loader">
+    <div id="load1" class="spin"></div>
+    <div id="load2" class="spin"></div>
+    <div id="load3" class="spin"></div>
+    <div id="load4" class="spin"></div>
+    <div id="load5" class="spin"></div>
+        </div>
+        <iframe id='config'></iframe>
+    </div>
+<!--    <div id='shortcut-panel' class='float-panel'>-->
+<!--        <div class='title'>快捷键列表</div>-->
+<!--        <div class='close-btn'>关闭</div>-->
+<!--        <ul>-->
+<!--            <div class='sub-title'>导航<div>-->
+<!--            <li>-->
+<!--                <span class='key'>j</span>-->
+<!--                <span class='val'> : 后一篇</span>-->
+<!--            </li>-->
+<!--            <li>-->
+<!--                <span class='key'>k</span>-->
+<!--                <span class='val'> : 前一篇</span>-->
+<!--            </li>-->
+<!--            <li>-->
+<!--                <span class='key'>l</span>-->
+<!--                <span class='val'> : 随机一篇</span>-->
+<!--            </li>-->
+<!--        </ul>-->
+<!--        <ul>-->
+<!--            <div class='sub-title'>撰写</div>-->
+<!--            <li>-->
+<!--                <span class='key'>c</span>-->
+<!--                <span class='val'> : 写日记</span>-->
+<!--            </li>-->
+<!--        </ul>-->
+<!--        <ul>-->
+<!--            <div class='sub-title'>工具</div>-->
+<!--            <li>-->
+<!--                <span class='key'>,</span>-->
+<!--                <span class='val'> : 设置</span>-->
+<!--            </li>-->
+<!--            <li>-->
+<!--                <span class='key'>?</span>-->
+<!--                <span class='val'> : 帮助</span>-->
+<!--            </li>-->
+<!--        </ul>-->
+<!--    </div>-->
+
+<!--    <script type="text/javascript">-->
+<!--        var csrf = "fpZ3ghJrkUTWMuEqj0WCVslW35zwa9xp";-->
+<!--    </script>-->
+    <script src='js/lib/jquery.min.js'></script>
+    <script src='js/lib/jquery-cookie.js'></script>
+    <script src='js/ohutil.js'></script>
+<!--    <script src='../static/js/lib/semantic.min.js'></script>-->
+    <script src="https://cdn.staticfile.org/twitter-bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    <script src='js/app/diary.js'></script>
+    <script src='js/app/calendar.js'></script>
+
+</body>
