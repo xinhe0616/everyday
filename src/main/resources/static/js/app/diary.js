@@ -104,7 +104,6 @@ function clickedWrite() {
 function showWrite(date){
     console.log("修改地址");
     console.log(window.location.href)
-    // let search = window.location.search;
     let src_setting = "write";
     $('.config-panel').modal('show');
     $('#config').attr('src',  src_setting);
