@@ -51,7 +51,7 @@ function save(data){
     console.log("是否"+ needClosePanel && !content);
     if (needClosePanel && !content) closePanel({reload:false});
 	$('#save-btn').text("保存中...");
-    OhUtil.post('/api/write/', {'content':content, date:DIARY_DATE}, function(e){
+    OhUtil.post('api/write/', {'content':content, date:DIARY_DATE}, function(e){
 		$('#save-btn').text("已保存");
 		if (needClosePanel) {
 			closePanel({reload:true});
